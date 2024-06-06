@@ -1,0 +1,95 @@
+/* LoginModal.css */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 60vh;
+    max-width: 400px; /* Limiting maximum width */
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    margin: 0;
+}
+
+.close-icon {
+    cursor: pointer;
+}
+
+/* Login.css */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%; /* Take up full width */
+    padding: 10px; /* Reduce padding for a more compact look */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+.login-button {
+    width: 100%; /* Take up full width */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+.forgot-password{
+    color: blue;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2vh;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.font-size-signUp{
+    font-size: 15px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.sign-up{
+    color: blue;
+    cursor: pointer;
+    
+}
+.sign-up a{
+    text-decoration: none;
+    color: #007bff;
+}
