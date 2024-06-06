@@ -1,0 +1,30 @@
+const express = require('express');
+const router = express.Router();
+const uploadFeaturedProduct = require('../../controller/product/uploadFeaturedProduct');
+const multer = require('multer');
+const cloudinary = require('cloudinary').v2;
+const { CloudinaryStorage } = require('multer-storage-cloudinary');
+
+// Configure Cloudinary
+cloudinary.config({
+  cloud_name: 'dc7vztzup',
+  api_key: '187955688287766',
+  api_secret: 'bkx6HJAlLokm38dA68UjGbyh8u4'
+});
+
+// Set up multer storage for Cloudinary
+const storage = new CloudinaryStorage({
+  cloudinary: cloudinary,
+  params: {
+    folder: 'Project-images', // Optional - specify your folder name
+    allowed_formats: ['jpg', 'jpeg', 'png'], // Optional - specify allowed formats
+    // Other optional parameters can be added here
+  }
+});
+const upload = multer({ storage: storage });
+
+// POST route for uploading product details
+router.post('/upload-featured-product-details', upload.single('image'), uploadFeaturedProduct.uploadFeaturedProduct);
+
+
+module.exports = router;
